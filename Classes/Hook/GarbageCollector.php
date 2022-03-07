@@ -69,9 +69,8 @@ class GarbageCollector extends \ApacheSolrForTypo3\Solr\GarbageCollector
         $table,
         $uid,
         array $fields,
-        /** @noinspection PhpUnusedParameterInspection */
-        DataHandler $tceMain
-    ) {
+        DataHandler $tceMain): void
+    {
         parent::processDatamap_afterDatabaseOperations($status, $table, $uid, $fields, $tceMain);
 
         if ($table === self::FILE_TABLE && $status === 'update') {
